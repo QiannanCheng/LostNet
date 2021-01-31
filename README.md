@@ -1,5 +1,5 @@
 # Long Short-Term Session Search: Joint Personalized Reranking and Next Query Prediction (WWW 2021)
-This repo share data and code of `LostNet` to facilitate reproducibility of our paper's results. 
+This repository shares data and code of `LostNet` to facilitate reproducibility of our paper's results. 
 ## Model Architecture
 ![](https://github.com/QiannanCheng/LostNet/blob/main/image.png)
 ## Requirements
@@ -15,11 +15,20 @@ We employ two benchmark datasets in our experiments: the AOL search log and Sogo
 * Both datasets have already been processed into our defined format, which could be directly used by our model. <br>
 You can manually download the datasets at [here](https://drive.google.com/drive/folders/1SoeXgZDLTdUhqfQV1I3I8HivsU_wEwxb?usp=sharing), and please create folder `data` in the root directory and put the files in it.
 ## Quick Running
+We simply try the default settings, and you can change hyperparameters arbitrarily on the command line.
 ### Training
 ```
 python main.py --dataset aol
 python main.py --dataset sogou
 ```
-We simply try the default settings, and you can change hyperparameters arbitrarily on the command line.
 ### Testing
 * We test the document reranking performance on three metrics (MAP, MRR and NDCG), and evaluate the ability of generating users’ next query on BLUE. 
+```
+python test.py --dataset aol
+python test.py --dataset sogou
+```
+* For the query suggestion task, we also evaluate the ability of identifying users’ next query from a list of candidate queries on MRR.
+```
+python test_mrr.py --dataset aol
+python test_mrr.py --dataset sogou
+```
