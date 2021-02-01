@@ -15,7 +15,7 @@ We employ two benchmark datasets in our experiments: the AOL search log and Sogo
 * Both datasets have already been processed into our defined format, which could be directly used by our model. <br>
 You can manually download the datasets at [here](https://drive.google.com/drive/folders/1SoeXgZDLTdUhqfQV1I3I8HivsU_wEwxb?usp=sharing), and please create folder `data` in the root directory and put the files in it.
 ## Quick Running
-We simply try the default settings, and you can change hyperparameters arbitrarily on the command line.
+We simply show the default settings here, and you can change hyperparameters arbitrarily on the command line.
 ### Training
 ```
 python main.py --dataset aol
